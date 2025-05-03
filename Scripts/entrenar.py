@@ -11,6 +11,9 @@ import numpy as np
 # 1. Cargar MobileNetV2 preentrenado en ImageNet (sin la capa de salida)
 # base_model = MobileNetV2(weights='imagenet', include_top=False, input_shape=(224, 224, 3))
 
+# Construir MobileNetV2 sin pesos preentrenados
+base_model = MobileNetV2(weights=None, include_top=False, input_shape=(224, 224, 3))
+
 # Congelar las capas base para que no se entrenen
 base_model.trainable = False
 
